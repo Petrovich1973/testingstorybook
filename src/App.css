@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+/*/////////////////////////////////////////////////////////////////////*/
 .App {
   text-align: center;
 }
@@ -9,14 +16,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /*font-size: calc(10px + 2vmin);*/
+  font-size: calc( (100vw - 30rem)/(80 - 30) * (1.5 - 1) + 2vmin);
+}
+@media only screen and (max-width: 768px) {
+  .App-header {
+    font-size: 2rem;
+  }
 }
 
 .App-link {
@@ -30,4 +41,76 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*/////////////////////////////////////////////////////////////////////*/
+
+.small {
+  font-size: 76%;
+}
+/*/////////////////////////////////////////////////////////////////////*/
+
+.box-black {
+  border-color: #000 !important;
+  background: linear-gradient(to top, #676767 50%, #000 50%);
+  color: white;
+}
+.box-green {
+  border-color: #5e945b !important;
+  background: linear-gradient(to top, #78ad75 50%, #5e945b 50%);
+  color: white;
+}
+.box-orange {
+  border-color: #ff5722 !important;
+  background: linear-gradient(to top, #f57d57 50%, #ff5722 50%);
+  color: white;
+}
+.box-blue {
+  border-color: #4064cc !important;
+  background: linear-gradient(to top, #6886dc 50%, #4064cc 50%);
+  color: white;
+}
+.box-red {
+  border-color: #d01b1b !important;
+  background: linear-gradient(to top, #d65757 50%, #d01b1b 50%);
+  color: white;
+}
+/*/////////////////////////////////////////////////////////////////////*/
+
+.box {
+  display: inline-block;
+  padding: .4em 1em;
+  border: 1px solid #b5b5b5;
+  background-size: 100% 200% !important;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+
+  padding: .4em 1em;
+  border-radius: .1em;
+ 
+  border: 1px solid #b5b5b5;
+  background: linear-gradient(to top, #f9f9f9 50%, #fff 50%);
+
+  background-size: 100% 200% !important;
+  background-position: left top;
+  transition: all .2s ease-out;
+}
+/*button + button {
+  border-left: none;
+}*/
+button:not([disabled]):hover {
+  background-position: left bottom;
+}
+button:not([disabled]):active {
+  transform: scaleY(.9);
+}
+button:not([disabled]) {
+  cursor: pointer;
+}
+button[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
 }
