@@ -24,8 +24,13 @@ storiesOf('Button', module)
 storiesOf('App', module)
   .addDecorator(withKnobs)
   .add('test App', withInfo(`<div>
-  	  	<p>Не маловажной особенностью является возможность собрать <strong>Storybook</strong> в статичные файлы.<br/>
-  	  	Которые можно будет например опубликовать на каком либо сайте или использовать внутри компании в качестве документации.</p>
-    	</div>`)(() => 
-		<App disabled={boolean('Disabled', false)} textButton={text('Button text', 'имя кнопки')}/>
-	));
+        <p>Не маловажной особенностью является возможность собрать <strong>Storybook</strong> в статичные файлы.<br/>
+        Которые можно будет например опубликовать на каком либо сайте или использовать внутри компании в качестве документации.</p>
+      </div>`)(() => 
+    <App disabled={boolean('Disabled', false)} textButton={text('Button text', 'имя кнопки')}/>
+  ))
+  .add('second App', withInfo(`<div>
+        <p>Description module.</p>
+      </div>`)(() => 
+    <App disabled={boolean('Disabled', false)} textButton={text('Button text', 'имя кнопки')}/>
+  ));

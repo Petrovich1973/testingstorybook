@@ -14,15 +14,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit s <code>src/App.js</code> and save to reload.
-            <span className="box box-orange">текст в боксе</span>
-            <button className="box-black" disabled={disabled}>{textButton}</button>
-            <button className="box-blue" disabled={disabled}><small>{textButton}</small></button>
-            <button className="box-orange" disabled={disabled}><small>{textButton}</small></button>
-            <button className="box-green" disabled={disabled}><small>{textButton}</small></button>
-            <button className="box-red" disabled={disabled}><small>{textButton}</small></button>
-            <button disabled={disabled}>{textButton}</button>
+            Edit <code>src/App.js</code> and save to reload.
           </p>
+          <button disabled={disabled}>{textButton}</button>
         </header>
       </div>
     );
